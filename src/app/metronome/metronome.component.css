@@ -1,0 +1,99 @@
+.metronome{
+    background-color: rgb(110, 68, 19);
+}
+
+.power-container{
+    text-align: center;
+}
+.metronome-power{
+    font-size: 15;
+    color: rgb(165, 165, 165);
+}
+
+.metronome-on{
+    color: limegreen;
+    font-size: 30;
+}
+
+.metronome-off{
+    color: red;
+    font-size: 30;
+}
+
+.bpm-container{
+    background-color: rgb(48, 48, 48);
+    border-width: 30px;
+    border-color: black;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.metronome-bpm{
+    font-size: 15em;
+    color: greenyellow;
+}
+
+.metronome-bpm-value{
+    font-size: 45em;
+    color: greenyellow;
+}
+
+.metronome-time{
+    font-size: 10em;
+    color: greenyellow;
+}
+
+.slider-container{
+    background-color: rgb(68, 36, 0);
+    border-width: 30px;
+    border-color: black;
+    border-radius: 50%;
+}
+
+.beat-container{
+    background-color: rgb(48, 48, 48);
+    border-width: 10px;
+    border-color: black;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.beat-value{
+    font-size: 40;
+    color: greenyellow;
+}
+
+.beat-button{
+    background-color: rgb(48, 48, 48);
+    border-width: 2px;
+    border-color: black;
+    border-radius: 50%;
+    font-size: 30;
+    color: white;
+}
+
+.start-button{
+    border-width: 2px;
+    border-color: black;
+    border-radius: 50%;
+    background-color: green;
+    font-size: 30;
+    color: white;
+}
+
+.start-button:active{
+    background-color: rgb(0, 87, 0);
+}
+
+.stop-button{
+    border-width: 2px;
+    border-color: black;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 30;
+    color: white;
+}
+
+.stop-button:active{
+    background-color: darkred;
+}

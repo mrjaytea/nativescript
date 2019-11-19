@@ -1,0 +1,38 @@
+<ActionBar title="Metronome" class="action-bar">
+    <NavigationButton android.systemIcon = 'ic_menu_back' (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="metronome">
+    <StackLayout class="m-15">
+        <StackLayout class="power-container">
+            <Label text="Power" class="metronome-power"></Label>
+            <Label *ngIf="isPlaying" text="&#8226;" class="metronome-on"></Label>
+            <Label *ngIf="!isPlaying" text="&#8226;" class="metronome-off"></Label>
+        </StackLayout>
+        <StackLayout class="bpm-container">
+            <Label [text]="bpmValue" class="metronome-bpm-value"></Label>
+            <Label text="BPM" class="metronome-bpm"></Label>
+            <Label text="4/4" class="metronome-time" loaded="onLabelLoaded" ></Label>
+        </StackLayout>
+        <StackLayout class="slider-container" marginTop="1%">
+            <Slider #bpm minValue="10" maxValue="200" value="{{bpmValue}}" [(ngModel)]="bpmValue" (valueChange)="sliderValueChange(bpm.value)"></Slider>
+        </StackLayout>
+        
+        <GridLayout rows="auto" columns="* * *" marginTop="2%">
+            <Button col='0' (tap)="minusBeats()" text="-" class="beat-button text-center"></Button>
+            <StackLayout col='1' class="beat-container">
+                <Label *ngIf="beatValue == 1" text="𝅝" class="beat-value text-center" loaded="onLabelLoaded" ></Label>
+                <Label *ngIf="beatValue == 2" text="𝅗𝅥" class="beat-value text-center" loaded="onLabelLoaded" ></Label>
+                <Label *ngIf="beatValue == 4" text="𝅘𝅥" class="beat-value text-center" loaded="onLabelLoaded" ></Label>
+                <Label *ngIf="beatValue == 8" text="𝅘𝅥𝅮" class="beat-value text-center" loaded="onLabelLoaded" ></Label>
+                <Label *ngIf="beatValue == 16" text="𝅘𝅥𝅯" class="beat-value text-center" loaded="onLabelLoaded" ></Label>
+                <Label *ngIf="beatValue == 32" text="𝅘𝅥𝅰" class="beat-value text-center" loaded="onLabelLoaded" ></Label>
+            </StackLayout>
+            <Button col='2' (tap)="plusBeats()" text="+" class="beat-button"></Button>
+        </GridLayout>
+        <GridLayout rows="auto" columns="* *" marginTop="2%">
+            <Button col='0' (tap)="startMetronome()" text="On" class="start-button" [isEnabled]='!isPlaying'></Button>
+            <Button col='1' (tap)="pauseMetronome()" text="Off" class="stop-button"></Button>
+        </GridLayout>
+    </StackLayout>
+</StackLayout>

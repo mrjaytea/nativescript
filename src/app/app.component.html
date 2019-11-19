@@ -1,0 +1,29 @@
+<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
+
+<BottomNavigation>
+    <TabStrip>
+        <TabStripItem (tap)="onNavItemTap('aboutme')">
+            <Label text="About" class="h3"></Label>
+        </TabStripItem>
+        <TabStripItem (tap)="onNavItemTap('qualifications')">
+            <Label text="Quali." class="h3"></Label>
+        </TabStripItem>
+        <TabStripItem (tap)="onNavItemTap('home')">
+            <Image src="~/icon/icon.png"></Image>
+        </TabStripItem>
+        <TabStripItem (tap)="onNavItemTap('skills')">
+            <Label text="Skills" class="h3"></Label>
+        </TabStripItem>
+        <TabStripItem (tap)="onNavItemTap('metronome')">
+            <Label text="Metronome" class="h4"></Label>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <GridLayout >
+            <page-router-outlet></page-router-outlet>
+        </GridLayout>
+    </TabContentItem>
+    
+
+</BottomNavigation>

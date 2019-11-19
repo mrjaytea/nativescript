@@ -1,0 +1,34 @@
+<ActionBar title="Home" class="action-bar">
+    <ActionItem position="right" (tap)="openQuote()">
+        <Button text="Fav. Quote" class="quote-btn" ></Button>
+    </ActionItem>
+</ActionBar>
+
+<ScrollView orientation="vertical">
+    <FlexboxLayout class="background" flexDirection="column">
+        <StackLayout class="container">
+            <Label text="Welcome to my NativeScript App" class="h1" textWrap="true"></Label>
+            <Label class="hr"></Label>
+            <Label text="I would like to invite you to check out all the pages/components of this app (the metronome page is for my own convenience)." class="p" textWrap="true"></Label>
+            <Label text="Please also check out the other mobile apps and web apps of mine!" class="p" textWrap="true"></Label>
+            <GridLayout rows="auto auto auto auto" columns="* *" marginTop='2%' marginBottom='2%'>
+                <Label row="0" col="0" text="Angular: " class="p" textWrap="true"></Label>
+                <Label row="0" col="1" text="(Link)" class="p" textWrap="true"></Label>
+
+                <Label row="1" col="0" text="React: " class="p" textWrap="true"></Label>
+                <Label row="1" col="1" text="(Link)" class="p" textWrap="true"></Label>
+
+                <Label row="2" col="0" text="Ionic and Cordova: " class="p" textWrap="true"></Label>
+                <Label row="2" col="1" text="(Link)" class="p" textWrap="true"></Label>
+
+                <Label row="3" col="0" text="ReactNative: " class="p" textWrap="true"></Label>
+                <Label row="3" col="1" text="(Link)" class="p" textWrap="true"></Label>
+            </GridLayout>>
+            <Label text="This app is built solely with NativeScript" class="p" textWrap="true"></Label>
+            <Label class="hr"></Label>
+            <Label text="Blueprint of this App" class="h2" textWrap="true"></Label>
+            <Image src="~/img/architecture.jpg" width="100%"></Image>
+        </StackLayout>
+    </FlexboxLayout>
+</ScrollView>
+

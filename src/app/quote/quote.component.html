@@ -1,0 +1,14 @@
+<StackLayout class="container">
+    <Button text="Close" (tap)="closeQuote()" class="close-btn"></Button>
+    <GridLayout verticalAlignment="top">
+        <Image src="{{baseUrl}}/images/wblake.jpg" width="100%"></Image>
+        <GridLayout verticalAlignment="bottom">
+            <StackLayout paddingTop="8" paddingBottom="8"
+                paddingLeft="16" paddingRight="16">
+                <Label text="He who desires, but acts not, breeds pestilence." class="quote-main eutemia" textWrap='true'></Label>
+                <Label text="--William Blake" class="quote-cite" textWrap='true'></Label>
+                <Label text="Proverbs of Hell, 1929" class="quote-source" textWrap='true'></Label>
+            </StackLayout>
+        </GridLayout>
+    </GridLayout>
+</StackLayout>

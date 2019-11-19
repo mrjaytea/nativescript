@@ -1,0 +1,13 @@
+.title {
+    color: black;
+    font-family: 'Nordica Plus', 'nordicaclassicltext';
+    font-weight: bold;
+    font-size: 30;
+}
+
+.content {
+    color: darkgray;
+    font-family: 'Nordica Plus', 'nordicaclassicltext';
+    font-size: 18;
+    text-transform: uppercase;
+}

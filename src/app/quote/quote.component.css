@@ -1,0 +1,27 @@
+.container{
+    background-color: black;
+}
+
+.quote-main{
+    font-family: "eutemia", "Eutemia";
+    color: white;
+    font-size: 25;
+    text-shadow: 2px 2px black;
+}
+
+.quote-cite{
+    color: white;
+    font-size: 15;
+}
+
+.quote-source{
+    color: white;
+    font-style: italic;
+    font-size: 15;
+}
+
+.close-btn{
+    background-color: transparent;
+    color: rgb(161, 161, 161);
+    height: 5%;
+}

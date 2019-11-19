@@ -1,0 +1,23 @@
+<ActionBar title="Skill" class="action-bar">
+    <NavigationButton android.systemIcon = 'ic_menu_back' (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<ActivityIndicator busy="true" *ngIf="!skill && !errMess"  width="100" height="100"></ActivityIndicator>
+<Label *ngIf="errMess" [text]="'Error: ' + errMess"></Label>
+<StackLayout class="container">
+    <CardView class="card" elevation="40" radius="10" ios:shadowRadius="3">
+        <StackLayout class="card-layout" *ngIf="skill"> 
+            <StackLayout orientation='horizontal'>
+                <Image height="100" width="100" src="{{baseUrl + skill.image}}" ></Image>
+                <StackLayout orientation='vertical' class="card-content">
+                    <Label class="h2" [text]="skill.name"></Label>
+                    <Label class="body" textWrap="true" [text]="skill.category"></Label>
+                    <Label class="body" textWrap="true" text="Proficiency: "></Label>
+                    <Progress width="90%" backgroundColor="#8b5a2b" [value]="skill.proficiency" maxValue="10" class="list-group-item-progress"></Progress>
+                </StackLayout>
+            </StackLayout>
+            <Image width="500" src="{{baseUrl + skill.cert}}" class="card-image"></Image>
+            <ActivityIndicator [busy]="isBusy" width="100" height="100" ></ActivityIndicator>
+        </StackLayout>
+    </CardView>    
+</StackLayout>
